@@ -26,20 +26,39 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+       
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.3.min.css" />
+        
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        
+        <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+        
+        <title>appMitBarcodePlugin32</title>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div data-role="page">
+            <div data-role="header">
+                <h1>PhoneGap mit Scanner-Plugin und jQ-Mobile</h1>
             </div>
-			<p><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
+            
+            <div data-role="content">
+                <div id="deviceready" class="blink">
+                    <p class="event listening">Connecting to Device</p>
+                    <p class="event received">Device is Ready</p>
+                </div>
+                <p><a href="#" id="scan" data-role="button" data-icon="star">SCAN</a></p>
+
+            </div>
+            
+            <div data-role="footer">
+                <h4>Footer</h4>
+            </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript" src="barcodescanner.js"></script>
+                
+        
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
